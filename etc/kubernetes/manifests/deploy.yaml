@@ -15,4 +15,12 @@ spec:
       containers:
         - name: simplilearn-phpinfo-container
           image: index.docker.io/academiaonline/simplilearn-phpinfo-2021-06:latest
+          args:
+            - -f
+            - index.php
+            - -S
+            - 0.0.0.0:8080
+          command:
+            - /usr/bin/php
+          workingDir: /src
 
